@@ -1,0 +1,20 @@
+#Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
+#Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
+
+1. Sploit1: In this target1 the vulnerability occurred belongs
+to buffer overflow. Since the target is not checking the 
+boundary when copying the string. We overwrite the stack
+with the shellcode and change the return address to shellcode
+address. 
+
+2. Sploit 2:
+Although target 2 aims to copy the first 272 characters in buf only, the vulnerability is that variable i and len can still be overwritten to bypass the restriction if we know their addresses. The difference between the address of buf and rip is 280 bytes, adding 4 (size of the return address) we get the size of attack_string. So we copy the shellcode to the bottom, then overwrite i and len based on their addresses relative to buf, set the environment variable with the address of buf and fill the rest of attack_string with "nop".
+
+3. Sploit3: In this tartget3 the vulnerability occurred belongs 
+to buffer overflow. Since the target3 that we are given is copying 
+the string iteratively, we just need to increment the pointer to 
+cover the 4 bytes that "AAAA" has been placed. Another 4 bytes 
+needed to be considered for return address as in Sploit1.
+
+4. Sploit 4:
+Although target 4 aims to copy the first 169 characters in buf only, the vulnerability is that variable i and len can still be overwritten to bypass the restriction if we know their addresses. The difference between the address of buf and rip is 184 bytes, adding 4 (size of the return address) we get the size of attack_string. So we copy the shellcode to it first, then overwrite i and len based on their addresses relative to buf, let the return address be the address of buf and fill the rest of attack_string with "nop".
