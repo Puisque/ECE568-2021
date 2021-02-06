@@ -39,4 +39,4 @@ where tfree(q) occcured. In order to overwrite the the return
 address we made two fake tags, one for target address and the 
 other for return address. When tfree is called, we can over write
 the return address with target address. Modification was made on 
-the shellcode 4 bytes after the target address. 
+the shellcode with a jump 4 bytes instruction.
