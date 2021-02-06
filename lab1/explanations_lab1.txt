@@ -32,3 +32,11 @@ return address) we get the size of attack_string. So we copy the shellcode
 to it first, then overwrite i and len based on their addresses relative
 to buf, let the return address be the address of buf and fill the rest
 of attack_string with "nop".
+
+6. Sploit6: In this target6 the vulnerability occurred belongs
+to double free category. We have the full control at the place 
+where tfree(q) occcured. In order to overwrite the the return 
+address we made two fake tags, one for target address and the 
+other for return address. When tfree is called, we can over write
+the return address with target address. Modification was made on 
+the shellcode 4 bytes after the target address. 
