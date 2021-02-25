@@ -1,2 +1,18 @@
 #Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
 #Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
+
+Part 2:
+getAuthenticatorStatus:
+Set the header and send a GET request to the server, and then 
+extract the device's authentication status and the enrollment 
+of the biometric modalities from the server's reply in JSON format.
+
+sendStepup:
+Set the header and send a POST request with user id, transaction id
+and message "login request" to the server. Then save the uuid inside 
+"user_verification" from the server's reply to stepupid.
+
+getStepupStatus:
+Set the header and send a GET request to the server with stepupid 
+set up previously, and then extract and return "status" inside 
+"user_verification" from the server's reply in JSON format.
