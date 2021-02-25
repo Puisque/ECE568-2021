@@ -1,5 +1,14 @@
 #Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
 #Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
+Part 1: TOTP (Google Autheticator)
+1.1 Generating an otpauth:// URI
+Accountname issuer and secret have been properly encoded
+accountname and issuer were converted using the provided
+urlEncode function, secret_hex was converted firstly from 
+hex to binary array,then to base_32. All were then properly
+passed in to barcode function.
+
+
 
 Part 2:
 getAuthenticatorStatus:
