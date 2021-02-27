@@ -1,5 +1,6 @@
 #Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
 #Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
+
 Part 1: TOTP (Google Autheticator)
 1.1 Generating an otpauth:// URI
 Accountname issuer and secret have been properly encoded
@@ -8,7 +9,12 @@ urlEncode function, secret_hex was converted firstly from
 hex to binary array,then to base_32. All were then properly
 passed in to barcode function.
 
-
+1.2 Validating the Codes
+At first we convert the secret_hex to 10-bit hexdecimals, then
+XOR it with opad and ipad to get outer_key and inner_key. Next
+we calcalate the meassage from current unix time and subsequently
+the HMAC value. Finally we convert the selected bytes to integer,
+as a result this TOTP value will be compared with user's input.
 
 Part 2:
 getAuthenticatorStatus:
