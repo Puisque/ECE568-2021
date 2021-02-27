@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <math.h>
 #include <time.h>
+#include <stdlib.h>
 
 #include "lib/sha1.h"
 
