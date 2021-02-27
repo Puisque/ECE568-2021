@@ -10,7 +10,7 @@ hex to binary array,then to base_32. All were then properly
 passed in to barcode function.
 
 1.2 Validating the Codes
-At first we convert the secret_hex to 10-bit hexdecimals, then
+At first we convert the secret_hex to a 10-bit hexdecimal, then
 XOR it with opad and ipad to get outer_key and inner_key. Next
 we calcalate the meassage from current unix time and subsequently
 the HMAC value. Finally we convert the selected bytes to integer,
