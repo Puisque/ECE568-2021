@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
     }
     
     uint8_t b32_result[20];
-    base32_encode(u8_hex_secret, 10, (uint8_t*)b32_result, 16);
+    base32_encode(u8_hex_secret, 10, (uint8_t*)b32_result, 20);
 
     char totp[200];
     sprintf(totp, "otpauth://totp/%s?issuer=%s&secret=%s&period=30", encodedAcc, encodedIssuer, b32_result);
