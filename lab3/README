@@ -5,7 +5,8 @@ PART 5:
 By observation, the URL of the transfer request contains a 
 field called "token" and the value of which is embedded in
 its HTML code. As a result, we can create an iframe and a 
-Javascript function to load the token value.
+Javascript function to load the token value. They will be
+filled into the exploitable field, message.
 
 PART 6:
 The vulnerability is that the target does not check if users'
