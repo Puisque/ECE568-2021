@@ -1,0 +1,27 @@
+#Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
+#Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
+
+PART 5:
+By observation, the URL of the transfer request contains a 
+field called "token" and the value of which is embedded in
+its HTML code. As a result, we can create an iframe and a 
+Javascript function to load the token value.
+
+PART 6:
+The vulnerability is that the target does not check if users'
+input contains SQL code fragments. Therefore by injecting
+"OR '1'='1", which will always be evaluated to true, we can
+easily login to Neville's account even if we don't know the password.
+
+PART 7:
+The vulnerability is the same as the previous problem. By injecting
+a new SQL command, we can modify Larry's salary and insert a database
+trigger once we know the column names of the target form.
+
+PART 8:
+We use "101 and ((select pin from credit where cc_number='1234123412341234')>a)"
+and "101 and ((select pin from credit where cc_number='1234123412341234')<b)"
+where a=0, b=10000 initially. Range of the PIN is reduced when the
+system's output is "Invalid account number". Finally the PIN 4862 was confirmed
+when "101 and ((select pin from credit where cc_number='1234123412341234')=4862)"
+was evaluated to true.
