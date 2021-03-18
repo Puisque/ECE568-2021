@@ -1,6 +1,12 @@
 #Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
 #Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
 
+PART 4:
+The exploitable field is message. Inside message we create 
+two iframes. One sets up the confirmation with Javascript 
+and the other shows the transfer is completed. After the 
+user clicks on the message, an automated transfer will start.
+
 PART 5:
 By observation, the URL of the transfer request contains a 
 field called "token" and the value of which is embedded in
