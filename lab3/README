@@ -1,6 +1,12 @@
 #Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
 #Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
 
+PART 3:
+The exploitable field is message. We can write a link of 
+a fake image in HTML there and set the URL of which contains
+the transfer request. After the user clicks on the message,
+an automated transfer will start.
+
 PART 4:
 The exploitable field is message. Inside message we create 
 two iframes. One sets up the confirmation with Javascript 
