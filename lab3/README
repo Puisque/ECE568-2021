@@ -1,6 +1,11 @@
 #Mingxuan Guo, 1003446719, mingxuan.guo@mail.utoronto.ca
 #Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
 
+PART 1:
+A fake third party HTML page was generated so that user
+could be tricked and input the user name with their password,
+javascript was written to retrieve this information.
+
 PART 3:
 The exploitable field is message. We can write a link of 
 a fake image in HTML there and set the URL of which contains
