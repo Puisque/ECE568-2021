@@ -26,6 +26,7 @@ its HTML code. As a result, we can create an iframe and a
 Javascript function to load the token value. They will be
 filled into the exploitable field, message. After the user
 clicks on the message, an automated transfer will start.
+(Screen=1469770765)
 
 PART 6:
 The vulnerability is that the target does not check if users'
