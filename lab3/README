@@ -17,6 +17,7 @@ The exploitable field is message. Inside message we create
 two iframes. One sets up the confirmation with Javascript 
 and the other shows the transfer is completed. After the 
 user clicks on the message, an automated transfer will start.
+(Screen=2014084448)
 
 PART 5:
 By observation, the URL of the transfer request contains a 
