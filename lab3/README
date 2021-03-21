@@ -30,9 +30,10 @@ clicks on the message, an automated transfer will start.
 
 PART 6:
 The vulnerability is that the target does not check if users'
-input contains SQL code fragments. Therefore by injecting
-"OR '1'='1", which will always be evaluated to true, we can
-easily login to Neville's account even if we don't know the password.
+input contains SQL code fragments. Therefore by removing the
+contraint on max input length and injecting "OR '1'='1", which
+will always be evaluated to true, we can easily login to Neville's
+account even if we don't know the password.
 
 PART 7:
 The vulnerability is the same as the previous problem. By injecting
