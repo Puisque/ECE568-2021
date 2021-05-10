@@ -1,0 +1,13 @@
+#Xiaolin Liu, 1004430305, aisling.liu@mail.utoronto.ca
+
+Part 2: Write a DNS proxy that sits between dig and local DNS server
+For this part, a middle sitting in between proxy was created. It simply acting as 
+A transmitter for the packages that are returned and the DNS client requests. 
+Packages in return will always be forwarded to where the query is sending from.
+
+Part 3: Spoof DNS reply using the DNS proxy
+This time, the proxy will still forward the client's queries but when it gets returned
+Packages it will make modification and make fake packages to forward to where the query 
+Is sending from. Specifically, an.rdata is changed to '1.2.3.4', ns.rdata is changed
+To "ns.dnslabattacker.net".The response will always being discard and a forged fake
+One is the one we are sending to the client. 
